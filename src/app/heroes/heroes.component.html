@@ -1,8 +1,29 @@
 <h2>My Heroes</h2>
+  <!-- (click) 入力値をadd()に渡したあと、入力をクリアする -->
+  <button class="add-button" (click)="add(heroName.value); heroName.value=''">
+    Add hero
+  </button>
+<div>
+  <label for="new-hero">
+    <span class="hero-param"> Hero name: </span>
+    <input id="new-hero" #heroName />
+  </label>
+  <label for="new-hero-attack">
+    <span class="hero-param">Hero attack:</span>
+    <input id="new-hero-attack" #heroAttack/>
+  </label>
+  <label for="new-hero-defense">
+    <span class="hero-param">Hero defense:</span>
+    <input id="new-hero-defense" #heroDefense/>
+  </label>
+
+</div>
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <a routerLink="/detail/{{hero.id}}">
       <span class="badge">{{hero.id}}</span> {{hero.name}}
     </a>
+    <button class="delete" title="delete hero"
+      (click)="delete(hero)">x</button>
   </li>
 </ul>
