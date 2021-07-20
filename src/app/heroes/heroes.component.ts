@@ -4,6 +4,11 @@ import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
 
+function randn(min: number, max: number): number {
+  let a = Math.floor( Math.random() * (max+1 - min) ) + min;
+  return a;
+}
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -26,10 +31,14 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
   }
 
-  add(name: string): void {
-    name = name.trim();
+  add(input_name: string, input_attack?: string, input_defense?: string): void {
+    var name: string = input_name.trim();
     if (!name) { return; }
-    this.heroService.addHero({ name } as Hero)
+    if (!input_attack) { var attack=randn(1,10); }
+    else { var attack: number=Number(input_attack); }
+    if (!input_defense) { var defense=randn(1,10); }
+    else { var defense: number=Number(input_defense); }
+    this.heroService.addHero({ name, attack, defense } as Hero)
       .subscribe(hero => {
         this.heroes.push(hero);
       });
