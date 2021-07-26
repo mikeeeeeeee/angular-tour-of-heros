@@ -13,16 +13,16 @@ function randn(min: number, max: number): number {
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 11, name: 'Dr Nice', attack: randn(1,10), defense: randn(1,10)},
-      { id: 12, name: 'Narco', attack: randn(1,10), defense: randn(1,10)},
-      { id: 13, name: 'Bombasto', attack: randn(1,10), defense: randn(1,10)},
-      { id: 14, name: 'Celeritas', attack: randn(1,10), defense: randn(1,10)},
-      { id: 15, name: 'Magneta', attack: randn(1,10), defense: randn(1,10)},
-      { id: 16, name: 'RubberMan', attack: randn(1,10), defense: randn(1,10)},
-      { id: 17, name: 'Dynama', attack: randn(1,10), defense: randn(1,10)},
-      { id: 18, name: 'Dr IQ', attack: randn(1,10), defense: randn(1,10)},
-      { id: 19, name: 'Magma', attack: randn(1,10), defense: randn(1,10)},
-      { id: 20, name: 'Tornado', attack: randn(1,10), defense: randn(1,10)}
+      { id: 1, name: 'Dr Nice', attack: randn(1,10), defense: randn(1,10)},
+      { id: 2, name: 'Narco', attack: randn(1,10), defense: randn(1,10)},
+      { id: 3, name: 'Bombasto', attack: randn(1,10), defense: randn(1,10)},
+      { id: 4, name: 'Celeritas', attack: randn(1,10), defense: randn(1,10)},
+      { id: 5, name: 'Magneta', attack: randn(1,10), defense: randn(1,10)},
+      { id: 6, name: 'RubberMan', attack: randn(1,10), defense: randn(1,10)},
+      { id: 7, name: 'Dynama', attack: randn(1,10), defense: randn(1,10)},
+      { id: 8, name: 'Dr IQ', attack: randn(1,10), defense: randn(1,10)},
+      { id: 9, name: 'Magma', attack: randn(1,10), defense: randn(1,10)},
+      { id: 10, name: 'Tornado', attack: randn(1,10), defense: randn(1,10)}
     ];
     return {heroes};
   }
@@ -33,6 +33,6 @@ export class InMemoryDataService implements InMemoryDbService {
   // if the heroes array is not empty, the method below returns the highest
   // hero id + 1.
   genId(heroes: Hero[]): number {
-    return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 11;
+    return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 1;
   }
 }

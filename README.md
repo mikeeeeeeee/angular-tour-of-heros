@@ -25,3 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Goal
+This project's goal is making Battleground(in HearthStone) or AutoChess like game based on the Angular tutorial for my study.
+
+# Notes
+
+## When trying dist by file protocol
+[reference](https://github.com/angular/angular/issues/13948#issuecomment-302727428)  
+1. In router configuration, enable useHash. (already applied)
+```
+CommonModule,RouterModule.forRoot(routes,{useHash:true})
+```
+
+2.  Removed base Href="/" tag from html and added it like this in the index.html file. (need this after `ng build`)
+```
+<script>document.write(('<base href="' + document.location + '" />').replace('index.html',''));</script>
+```

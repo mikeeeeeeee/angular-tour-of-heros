@@ -1,6 +1,6 @@
 <h2>My Heroes</h2>
   <!-- (click) 入力値をadd()に渡したあと、入力をクリアする -->
-  <button class="add-button" (click)="add(heroName.value); heroName.value=''">
+  <button class="add-button" (click)="add(heroName.value,heroAttack.value,heroDefense.value); heroName.value=''; heroAttack.value=''; heroDefense.value=''">
     Add hero
   </button>
 <div>
@@ -10,11 +10,13 @@
   </label>
   <label for="new-hero-attack">
     <span class="hero-param">Hero attack:</span>
-    <input id="new-hero-attack" #heroAttack/>
+    <!--Todo : I dont know why, but, min and max dont work.-->
+    <input type="number" min="1" max="10" id="new-hero-attack" #heroAttack/>
   </label>
   <label for="new-hero-defense">
     <span class="hero-param">Hero defense:</span>
-    <input id="new-hero-defense" #heroDefense/>
+    <!--Todo : I dont know why, but, min and max dont work.-->
+    <input type="number" min="1" max="10" id="new-hero-defense" #heroDefense/>
   </label>
 
 </div>
