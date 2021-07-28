@@ -75,8 +75,8 @@ artifacts:
   files:
     - dist/**/*
   name: $(date +%Y-%m-%d)
-#  discard-paths: no | yes
-#  base-directory: location
+  discard-paths: yes
+#  base-directory: 
 #  exclude-paths: excluded paths
 #  enable-symlinks: no | yes
 #  s3-prefix: prefix
