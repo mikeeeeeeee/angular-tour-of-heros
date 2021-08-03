@@ -14,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { PurchaseComponent } from './purchase/purchase.component';
 import { BattleComponent } from './battle/battle.component';
+import { OptionsComponent } from './options/options.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BattleComponent } from './battle/battle.component';
     DashboardComponent,
     HeroSearchComponent,
     PurchaseComponent,
-    BattleComponent
+    BattleComponent,
+    OptionsComponent
   ],
   imports: [
     HttpClientModule,
