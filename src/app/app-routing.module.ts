@@ -6,9 +6,11 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { PurchaseComponent } from './purchase/purchase.component';
 import { BattleComponent } from './battle/battle.component';
 import { OptionsComponent } from './options/options.component';
+import { TopMenuComponent } from './top-menu/top-menu.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/top_menu', pathMatch: 'full' },
+  { path: 'top_menu', component: TopMenuComponent},
   { path: 'options', component: OptionsComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'dashboard', component: DashboardComponent },
