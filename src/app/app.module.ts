@@ -38,7 +38,8 @@ import { TopMenuComponent } from './top-menu/top-menu.component';
     ),
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
